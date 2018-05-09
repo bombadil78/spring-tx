@@ -3,6 +3,8 @@ package tx;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -15,7 +17,18 @@ public class Account {
   @NotNull
   private String owner;
 
+  @Min(0)
+  @Max(100)
   private int balance;
+
+  public Account() {
+
+  }
+
+  public Account(String owner, int balance) {
+    this.owner = owner;
+    this.balance = balance;
+  }
 
   public Long getId() {
     return id;

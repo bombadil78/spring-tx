@@ -23,4 +23,9 @@ public class Payment {
   public int getAmount() {
     return amount;
   }
+
+  @Override
+  public String toString() {
+    return String.format("Account #%d pays %d to account #%d", fromAccountId, amount, toAccountId);
+  }
 }
