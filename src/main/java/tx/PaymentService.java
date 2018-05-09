@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class PaymentService {
 
   public void executePayment(Payment payment) {
-    throw new UnsupportedOperationException();
+
   }
 }
