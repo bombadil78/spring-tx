@@ -40,4 +40,9 @@ public class Account {
   public void setBalance(int balance) {
     this.balance = balance;
   }
+
+  @Override
+  public String toString() {
+    return String.format("id=%d owner=%s balance=%d", id, owner, balance);
+  }
 }
